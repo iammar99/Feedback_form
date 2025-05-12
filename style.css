@@ -1,0 +1,51 @@
+/* ---------------------- Alignment ---------------------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------- Number Input scroll bar ---------------------- */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* ---------------------- Header images ---------------------- */
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+/* ---------------------- Form ---------------------- */
+
+
+form {
+    border: 1px solid black;
+    margin: 47px auto;
+    padding: 56px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 510px;
+}
+
+form .container{
+    /* width: max-content;
+    margin-left: auto; */
+}

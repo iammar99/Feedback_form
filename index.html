@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack Form</title>
+
+    <!-- ----------------- Bootstrap ----------------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <!-- ----------------- Favicon ----------------- -->
+
+<link rel="icon" href="./logo-icon.png"     sizes="any">
+
+    <!-- ----------------- Stylesheet ----------------- -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ----------------- Header ----------------- -->
+    <header>
+        <div class="container-fluid bg-info">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <h1 class="text-light py-4 my-0 fw-bold fs-1">
+                        <span class="text-warning">FeedBack</span> Form
+                    </h1>
+                    <img src="./logo.png" class="ms-4" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ----------------- Main ----------------- -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="">
+                        <div class="d-flex container">
+                            <div class="row">
+                                <!-- ----------- Name Input Field ----------- -->
+                                <div class="mb-3 col-md-6 col-12">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <!-- ----------- Ag # Input Field ----------- -->
+                                <div class="mb-3 col-md-6 col-12">
+                                    <label for="ag" class="form-label">AG #</label>
+                                    <input type="number" class="form-control" id="ag">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex container">
+                            <div class="row">
+                                <!-- ----------- Degree Input Field ----------- -->
+                                <div class="mb-3 col-md-6 col-12">
+                                    <label for="degree" class="form-label">Degree</label>
+                                    <select class="form-select" aria-label="Default select example" id="degree">
+                                        <option selected>Select Your Degree</option>
+                                        <option value="Bachelors">Bachelors</option>
+                                        <option value="Masters">Masters</option>
+                                        <option value="Doctrate">Doctrate</option>
+                                    </select>
+                                </div>
+                                <!-- ----------- Discpline Input Field ----------- -->
+                                <div class="mb-3 col-md-6 col-12">
+                                    <label for="discipline" class="form-label">Discipline</label>
+                                    <select class="form-select" aria-label="Default select example" id="discipline">
+                                        <option selected>Select Your Discipline</option>
+                                        <option value="Computer Science">Computer Science</option>
+                                        <option value="Information Technology">Information Technology</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Bio Informatics">Bio Informatics</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 1 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">How would you rate the overall
+                                            environment of the
+                                            department?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="environment"
+                                                id="Excellent">
+                                            <label class="form-check-label" for="Excellent">
+                                                Excellent
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="environment" id="Good">
+                                            <label class="form-check-label" for="Good">
+                                                Good
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="environment"
+                                                id="Average">
+                                            <label class="form-check-label" for="Average">
+                                                Average
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="environment" id="Poor">
+                                            <label class="form-check-label" for="Poor">
+                                                Poor
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 2 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label"> Are the administrative staff cooperative
+                                            and helpful</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="administrative"
+                                                id="Always">
+                                            <label class="form-check-label" for="Always">
+                                                Always
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="administrative"
+                                                id="Often">
+                                            <label class="form-check-label" for="Often">
+                                                Often
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="administrative"
+                                                id="Rarely">
+                                            <label class="form-check-label" for="Rarely">
+                                                Rarely
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="administrative"
+                                                id="Never">
+                                            <label class="form-check-label" for="Never">
+                                                Never
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 3 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">How do you find the availability of
+                                            learning resources (books, lab equipment, etc.)</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="availability"
+                                                id="Very Satisfactory">
+                                            <label class="form-check-label" for="Very Satisfactory">
+                                                Very Satisfactory
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="availability"
+                                                id="Satisfactory">
+                                            <label class="form-check-label" for="Satisfactory">
+                                                Satisfactory
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="availability"
+                                                id="Needs Improvement">
+                                            <label class="form-check-label" for="Needs Improvement">
+                                                Needs Improvement
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="availability"
+                                                id="Not Available">
+                                            <label class="form-check-label" for="Not Available">
+                                                Not Available
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 4 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">Are the faculty members approachable for
+                                            academic help?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="faculty"
+                                                id="Very Approachable">
+                                            <label class="form-check-label" for="Very Approachable">
+                                                Very Approachable
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="faculty"
+                                                id="Somewhat Approachable">
+                                            <label class="form-check-label" for="Somewhat Approachable">
+                                                Somewhat Approachable
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="faculty"
+                                                id="Rarely Approachable">
+                                            <label class="form-check-label" for="Rarely Approachable">
+                                                Rarely Approachable
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="faculty" id="Not at all">
+                                            <label class="form-check-label" for="Not at all">
+                                                Not at all
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 5 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">How would you rate the cleanliness and
+                                            hygiene of the department?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cleanliness "
+                                                id="Very Clean">
+                                            <label class="form-check-label" for="Very Clean">
+                                                Very Clean
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cleanliness " id="Clean">
+                                            <label class="form-check-label" for="Clean">
+                                                Clean
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cleanliness " id="Dirty">
+                                            <label class="form-check-label" for="Dirty">
+                                                Dirty
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cleanliness "
+                                                id="Very Dirty">
+                                            <label class="form-check-label" for="Very Dirty">
+                                                Very Dirty
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 6 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">How satisfied are you with the facilities
+                                            (labs, classrooms, internet, etc.)?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="facilities"
+                                                id="Very Satisfied">
+                                            <label class="form-check-label" for="Very Satisfied">
+                                                Very Satisfied
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="facilities"
+                                                id="Satisfied">
+                                            <label class="form-check-label" for="Satisfied">
+                                                Satisfied
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="facilities" id="Neutral">
+                                            <label class="form-check-label" for="Neutral">
+                                                Neutral
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="facilities"
+                                                id="Dissatisfied">
+                                            <label class="form-check-label" for="Dissatisfied">
+                                                Dissatisfied
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 7 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">Is the course curriculum relevant and up
+                                            to date?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="curriculum"
+                                                id="Strongly Agree">
+                                            <label class="form-check-label" for="Strongly Agree">
+                                                Strongly Agree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="curriculum" id="Agree">
+                                            <label class="form-check-label" for="Agree">
+                                                Agree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="curriculum"
+                                                id="Disagree">
+                                            <label class="form-check-label" for="Disagree">
+                                                Disagree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="curriculum"
+                                                id="Strongly Disagree">
+                                            <label class="form-check-label" for="Strongly Disagree">
+                                                Strongly Disagree
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 8 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">Do you feel the department encourages
+                                            student activities and events?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="encourages"
+                                                id="Strongly Agree">
+                                            <label class="form-check-label" for="Strongly Agree">
+                                                Strongly Agree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="encourages" id="Agree">
+                                            <label class="form-check-label" for="Agree">
+                                                Agree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="encourages"
+                                                id="Disagree">
+                                            <label class="form-check-label" for="Disagree">
+                                                Disagree
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="encourages"
+                                                id="Strongly Disagree">
+                                            <label class="form-check-label" for="Strongly Disagree">
+                                                Strongly Disagree
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 9 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">How would you rate the support for
+                                            internships or job placements?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="internships"
+                                                id="Excellent">
+                                            <label class="form-check-label" for="Excellent">
+                                                Excellent
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="internships" id="Good">
+                                            <label class="form-check-label" for="Good">
+                                                Good
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="internships" id="Fair">
+                                            <label class="form-check-label" for="Fair">
+                                                Fair
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="internships" id="Poor">
+                                            <label class="form-check-label" for="Poor">
+                                                Poor
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------- MCQ # 10 Input Field ----------- -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 col">
+                                        <label for="degree" class="form-label">Overall, how satisfied are you with your
+                                            experience in the department?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Overall"
+                                                id="Very Satisfied">
+                                            <label class="form-check-label" for="Very Satisfied">
+                                                Very Satisfied
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Overall" id="Satisfied">
+                                            <label class="form-check-label" for="Satisfied">
+                                                Satisfied
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Overall" id="Neutral">
+                                            <label class="form-check-label" for="Neutral">
+                                                Neutral
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="Overall"
+                                                id="Dissatisfied">
+                                            <label class="form-check-label" for="Dissatisfied">
+                                                Dissatisfied
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-info text-light" type="button" onclick="handleClick()">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ----------------- Footer ----------------- -->
+    <footer>
+        <div class="container-fluid bg-info">
+            <div class="row">
+                <div class="col">
+                    <p class="mx-auto py-4 my-0 text-light text-center fw-bold fs-5">
+                        &copy; <span id="year"></span> FeedBack Form | All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ----------------- Sweet Alert ----------------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- ----------------- Bootstrap ----------------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+    <!-- ----------------- Script ----------------- -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

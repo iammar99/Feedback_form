@@ -13,7 +13,7 @@
 
     <!-- ----------------- Favicon ----------------- -->
 
-<link rel="icon" href="./logo-icon.png"     sizes="any">
+    <link rel="icon" href="./logo-icon.png" sizes="any">
 
     <!-- ----------------- Stylesheet ----------------- -->
 
@@ -39,38 +39,45 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <form action="">
+                    <form action="./submit.php" method="POST">
                         <div class="d-flex container">
                             <div class="row my-2">
                                 <!-- ----------- Name Input Field ----------- -->
                                 <div class="mb-3 col-md-6 col-12">
                                     <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name">
+                                    <input type="text" class="form-control" id="name" name="name">
                                 </div>
-                                <!-- ----------- Ag # Input Field ----------- -->
+
+                                <!-- ----------- AG # Input Field ----------- -->
                                 <div class="mb-3 col-md-6 col-12">
                                     <label for="ag" class="form-label">AG #</label>
-                                    <input type="number" class="form-control" id="ag">
+                                    <input type="text" onblur="agCheck()" placeholder="2020-ag-1234" required
+                                        class="form-control" id="ag" name="ag">
+                                    <div id="error"></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="d-flex container">
                             <div class="row my-2">
                                 <!-- ----------- Degree Input Field ----------- -->
                                 <div class="mb-3 col-md-6 col-12">
                                     <label for="degree" class="form-label">Degree</label>
-                                    <select class="form-select" aria-label="Default select example" id="degree">
-                                        <option selected>Select Your Degree</option>
+                                    <select class="form-select" aria-label="Default select example" id="degree"
+                                        name="degree">
+                                        <option selected value="">Select Your Degree</option>
                                         <option value="Bachelors">Bachelors</option>
                                         <option value="Masters">Masters</option>
                                         <option value="Doctrate">Doctrate</option>
                                     </select>
                                 </div>
-                                <!-- ----------- Discpline Input Field ----------- -->
+
+                                <!-- ----------- Discipline Input Field ----------- -->
                                 <div class="mb-3 col-md-6 col-12">
                                     <label for="discipline" class="form-label">Discipline</label>
-                                    <select class="form-select" aria-label="Default select example" id="discipline">
-                                        <option selected>Select Your Discipline</option>
+                                    <select class="form-select" aria-label="Default select example" id="discipline"
+                                        name="discipline">
+                                        <option selected value="">Select Your Discipline</option>
                                         <option value="Computer Science">Computer Science</option>
                                         <option value="Information Technology">Information Technology</option>
                                         <option value="Software Engineering">Software Engineering</option>
@@ -79,36 +86,38 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 1 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3 col">
                                         <label for="degree" class="form-label">How would you rate the overall
-                                            environment of the
-                                            department?</label>
+                                            environment of the department?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="environment"
-                                                id="Excellent">
+                                                id="Excellent" value="Excellent">
                                             <label class="form-check-label" for="Excellent">
                                                 Excellent
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="environment" id="Good">
+                                            <input class="form-check-input" type="radio" name="environment" id="Good"
+                                                value="Good">
                                             <label class="form-check-label" for="Good">
                                                 Good
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="environment"
-                                                id="Average">
+                                            <input class="form-check-input" type="radio" name="environment" id="Average"
+                                                value="Average">
                                             <label class="form-check-label" for="Average">
                                                 Average
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="environment" id="Poor">
+                                            <input class="form-check-input" type="radio" name="environment" id="Poor"
+                                                value="Poor">
                                             <label class="form-check-label" for="Poor">
                                                 Poor
                                             </label>
@@ -117,37 +126,38 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 2 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3 col">
-                                        <label for="degree" class="form-label"> Are the administrative staff cooperative
-                                            and helpful</label>
+                                        <label for="degree" class="form-label">Are the administrative staff cooperative
+                                            and helpful?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="administrative"
-                                                id="Always">
+                                                id="Always" value="Always">
                                             <label class="form-check-label" for="Always">
                                                 Always
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="administrative"
-                                                id="Often">
+                                                id="Often" value="Often">
                                             <label class="form-check-label" for="Often">
                                                 Often
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="administrative"
-                                                id="Rarely">
+                                                id="Rarely" value="Rarely">
                                             <label class="form-check-label" for="Rarely">
                                                 Rarely
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="administrative"
-                                                id="Never">
+                                                id="Never" value="Never">
                                             <label class="form-check-label" for="Never">
                                                 Never
                                             </label>
@@ -156,37 +166,38 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 3 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3 col">
                                         <label for="degree" class="form-label">How do you find the availability of
-                                            learning resources (books, lab equipment, etc.)</label>
+                                            learning resources (books, lab equipment, etc.)?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="availability"
-                                                id="Very Satisfactory">
+                                                id="Very Satisfactory" value="Very Satisfactory">
                                             <label class="form-check-label" for="Very Satisfactory">
                                                 Very Satisfactory
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="availability"
-                                                id="Satisfactory">
+                                                id="Satisfactory" value="Satisfactory">
                                             <label class="form-check-label" for="Satisfactory">
                                                 Satisfactory
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="availability"
-                                                id="Needs Improvement">
+                                                id="Needs Improvement" value="Needs Improvement">
                                             <label class="form-check-label" for="Needs Improvement">
                                                 Needs Improvement
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="availability"
-                                                id="Not Available">
+                                                id="Not Available" value="Not Available">
                                             <label class="form-check-label" for="Not Available">
                                                 Not Available
                                             </label>
@@ -195,6 +206,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 4 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -204,27 +216,28 @@
                                             academic help?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="faculty"
-                                                id="Very Approachable">
+                                                id="Very Approachable" value="Very Approachable">
                                             <label class="form-check-label" for="Very Approachable">
                                                 Very Approachable
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="faculty"
-                                                id="Somewhat Approachable">
+                                                id="Somewhat Approachable" value="Somewhat Approachable">
                                             <label class="form-check-label" for="Somewhat Approachable">
                                                 Somewhat Approachable
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="faculty"
-                                                id="Rarely Approachable">
+                                                id="Rarely Approachable" value="Rarely Approachable">
                                             <label class="form-check-label" for="Rarely Approachable">
                                                 Rarely Approachable
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="faculty" id="Not at all">
+                                            <input class="form-check-input" type="radio" name="faculty" id="Not at all"
+                                                value="Not at all">
                                             <label class="form-check-label" for="Not at all">
                                                 Not at all
                                             </label>
@@ -233,6 +246,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 5 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -241,27 +255,29 @@
                                         <label for="degree" class="form-label">How would you rate the cleanliness and
                                             hygiene of the department?</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="cleanliness "
-                                                id="Very Clean">
+                                            <input class="form-check-input" type="radio" name="cleanliness"
+                                                id="Very Clean" value="Very Clean">
                                             <label class="form-check-label" for="Very Clean">
                                                 Very Clean
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="cleanliness " id="Clean">
+                                            <input class="form-check-input" type="radio" name="cleanliness" id="Clean"
+                                                value="Clean">
                                             <label class="form-check-label" for="Clean">
                                                 Clean
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="cleanliness " id="Dirty">
+                                            <input class="form-check-input" type="radio" name="cleanliness" id="Dirty"
+                                                value="Dirty">
                                             <label class="form-check-label" for="Dirty">
                                                 Dirty
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="cleanliness "
-                                                id="Very Dirty">
+                                            <input class="form-check-input" type="radio" name="cleanliness"
+                                                id="Very Dirty" value="Very Dirty">
                                             <label class="form-check-label" for="Very Dirty">
                                                 Very Dirty
                                             </label>
@@ -270,6 +286,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 6 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -279,27 +296,28 @@
                                             (labs, classrooms, internet, etc.)?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="facilities"
-                                                id="Very Satisfied">
+                                                id="Very Satisfied" value="Very Satisfied">
                                             <label class="form-check-label" for="Very Satisfied">
                                                 Very Satisfied
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="facilities"
-                                                id="Satisfied">
+                                                id="Satisfied" value="Satisfied">
                                             <label class="form-check-label" for="Satisfied">
                                                 Satisfied
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="facilities" id="Neutral">
+                                            <input class="form-check-input" type="radio" name="facilities" id="Neutral"
+                                                value="Neutral">
                                             <label class="form-check-label" for="Neutral">
                                                 Neutral
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="facilities"
-                                                id="Dissatisfied">
+                                                id="Dissatisfied" value="Dissatisfied">
                                             <label class="form-check-label" for="Dissatisfied">
                                                 Dissatisfied
                                             </label>
@@ -308,6 +326,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 7 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -317,27 +336,28 @@
                                             to date?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="curriculum"
-                                                id="Strongly Agree">
+                                                id="Strongly Agree" value="Strongly Agree">
                                             <label class="form-check-label" for="Strongly Agree">
                                                 Strongly Agree
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="curriculum" id="Agree">
+                                            <input class="form-check-input" type="radio" name="curriculum" id="Agree"
+                                                value="Agree">
                                             <label class="form-check-label" for="Agree">
                                                 Agree
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="curriculum"
-                                                id="Disagree">
+                                            <input class="form-check-input" type="radio" name="curriculum" id="Disagree"
+                                                value="Disagree">
                                             <label class="form-check-label" for="Disagree">
                                                 Disagree
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="curriculum"
-                                                id="Strongly Disagree">
+                                                id="Strongly Disagree" value="Strongly Disagree">
                                             <label class="form-check-label" for="Strongly Disagree">
                                                 Strongly Disagree
                                             </label>
@@ -346,6 +366,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 8 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -355,27 +376,28 @@
                                             student activities and events?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="encourages"
-                                                id="Strongly Agree">
+                                                id="Strongly Agree" value="Strongly Agree">
                                             <label class="form-check-label" for="Strongly Agree">
                                                 Strongly Agree
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="encourages" id="Agree">
+                                            <input class="form-check-input" type="radio" name="encourages" id="Agree"
+                                                value="Agree">
                                             <label class="form-check-label" for="Agree">
                                                 Agree
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="encourages"
-                                                id="Disagree">
+                                            <input class="form-check-input" type="radio" name="encourages" id="Disagree"
+                                                value="Disagree">
                                             <label class="form-check-label" for="Disagree">
                                                 Disagree
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="encourages"
-                                                id="Strongly Disagree">
+                                                id="Strongly Disagree" value="Strongly Disagree">
                                             <label class="form-check-label" for="Strongly Disagree">
                                                 Strongly Disagree
                                             </label>
@@ -384,6 +406,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 9 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
@@ -393,25 +416,28 @@
                                             internships or job placements?</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="internships"
-                                                id="Excellent">
+                                                id="Excellent" value="Excellent">
                                             <label class="form-check-label" for="Excellent">
                                                 Excellent
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="internships" id="Good">
+                                            <input class="form-check-input" type="radio" name="internships" id="Good"
+                                                value="Good">
                                             <label class="form-check-label" for="Good">
                                                 Good
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="internships" id="Fair">
+                                            <input class="form-check-input" type="radio" name="internships" id="Fair"
+                                                value="Fair">
                                             <label class="form-check-label" for="Fair">
                                                 Fair
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="internships" id="Poor">
+                                            <input class="form-check-input" type="radio" name="internships" id="Poor"
+                                                value="Poor">
                                             <label class="form-check-label" for="Poor">
                                                 Poor
                                             </label>
@@ -420,44 +446,37 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ----------- MCQ # 10 Input Field ----------- -->
                         <div class="container my-2">
                             <div class="row">
                                 <div class="col">
-                                    <div class="mb-3 col">
-                                        <label for="degree" class="form-label">Overall, how satisfied are you with your
-                                            experience in the department?</label>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="Overall"
-                                                id="Very Satisfied">
-                                            <label class="form-check-label" for="Very Satisfied">
-                                                Very Satisfied
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="Overall" id="Satisfied">
-                                            <label class="form-check-label" for="Satisfied">
-                                                Satisfied
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="Overall" id="Neutral">
-                                            <label class="form-check-label" for="Neutral">
-                                                Neutral
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="Overall"
-                                                id="Dissatisfied">
-                                            <label class="form-check-label" for="Dissatisfied">
-                                                Dissatisfied
-                                            </label>
-                                        </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="overall" id="Very Satisfied"
+                                            value="Very Satisfied">
+                                        <label class="form-check-label" for="Very Satisfied">Very Satisfied</label>
                                     </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="overall" id="Satisfied"
+                                            value="Satisfied">
+                                        <label class="form-check-label" for="Satisfied">Satisfied</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="overall" id="Neutral"
+                                            value="Neutral">
+                                        <label class="form-check-label" for="Neutral">Neutral</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="overall" id="Dissatisfied"
+                                            value="Dissatisfied">
+                                        <label class="form-check-label" for="Dissatisfied">Dissatisfied</label>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-info text-light" type="button" onclick="handleClick()">
+
+                        <button class="btn btn-info text-light" type="submit" onclick="handleClick()">
                             Submit
                         </button>
                     </form>
